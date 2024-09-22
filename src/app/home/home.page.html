@@ -23,7 +23,7 @@
 
 <ion-list>
   <ion-item>
-    <ion-input labelPlacement="stacked" label="Nombre de Usuario" placeholder="">
+    <ion-input [(ngModel)]="alumno" labelPlacement="stacked" label="Nombre de Usuario" placeholder="">
       <ion-icon slot="start"name="person-circle-outline" aria-hidden="true"></ion-icon>
       <ion-button fill="clear" slot="end" aria-label="Show/hide">
         <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
@@ -37,7 +37,7 @@
 
 <ion-list>
   <ion-item>
-    <ion-input labelPlacement="stacked" type="password" label="Ingresar Contraseña" placeholder="">
+    <ion-input [(ngModel)]="password" labelPlacement="stacked" type="password" label="Ingresar Contraseña" placeholder="">
       <ion-icon slot="start" name="key-outline" aria-hidden="true"></ion-icon>
       <ion-button fill="clear" slot="end" aria-label="Show/hide">
         <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
@@ -48,7 +48,7 @@
 
 
 <div class="btn">
-  <ion-button   color="success">Ingresar</ion-button>
+  <ion-button (click)="validateLogin()" color="success">Ingresar</ion-button>
 </div>
 
 </ion-content>
