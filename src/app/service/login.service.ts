@@ -7,7 +7,9 @@ import { Alumno } from '../model/alumno';
 export class LoginService {
 
   alumnos : Alumno [] = [
-    new Alumno('axel','123')
+    new Alumno('axel','123'),
+    new Alumno('kevin','123'),
+    new Alumno('mati','123')
   ]
 
   constructor() { }
