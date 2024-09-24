@@ -15,16 +15,12 @@ export class HomePage {
   constructor(
     private toastController: ToastController,
     private router: Router,
-    private loginService: LoginService
+    private  loginService: LoginService
   ) {
     this.alumno =''
     this.password =''
     this.message ='Logo exitoso'
   }
-
-  
-
-
   async validateLogin(){
     if(this.loginService.validateLogin(this.alumno,this.password)){
       const NavigationExtras:NavigationExtras = {
@@ -33,9 +29,14 @@ export class HomePage {
         }
       }
       this.router.navigate(['/alumno'],NavigationExtras);
-    }else{
+    }else { 
 
     }
   }
 
+  irrecuperarContrasena(){
+    this.router.navigate(['/recuperar-contrasena'])
+  }
+
+  
 }

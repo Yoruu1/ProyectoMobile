@@ -1,8 +1,56 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>alumno</ion-title>
-    {{alumno}}
-  </ion-toolbar>
+
 </ion-header>
 
+
+<ion-content  [fullscreen]="true" class="body">
+  <section class="box_card">
+    <ion-card>
+      <ion-card-header>
+        <ion-img src="https://images.pexels.com/photos/2826131/pexels-photo-2826131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" ></ion-img>
+        <div class="box">
+          <h2 class="alumno">Alumno:</h2>
+          <p class="span">{{alumno}}</p>
+        </div>
+        <div class="icon">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
+      </ion-card-header>
+    
+    
+    </ion-card>
+  
+  
+    <ion-card>
+      <ion-card-header>
+        <div class="box_2">
+          <h1 class="welcom">Bienvenido "{{alumno}}"</h1>
+        </div>
+      </ion-card-header>
+    
+      <ion-card-content>
+        
+      </ion-card-content>
+    </ion-card>
+  
+  
+    <ion-card>
+      <ion-card-header>
+        <div class="box_3">
+          <h1 class="asistence">Asistencia</h1>
+          <div class="img">
+        
+            <ion-img class="porcentaje" src="https://static.vecteezy.com/system/resources/thumbnails/014/494/807/small/website-buffer-loading-icon-a-bar-showing-the-download-status-of-information-on-the-website-png.png" ></ion-img>
+          </div>
+        </div>
+      </ion-card-header>
+    
+      <ion-card-content>
+        
+      </ion-card-content>
+    </ion-card>
+  </section>
+
+  
+</ion-content>
 

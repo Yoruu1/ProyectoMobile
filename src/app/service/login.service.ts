@@ -13,11 +13,16 @@ export class LoginService {
   ]
 
   constructor() { }
-  //Pimer paso: Encontrar a los usuarios
-  validateLogin(alumno:string, password: string):boolean {
-    const found= this.alumnos.find(Alumno=> Alumno.alumno === alumno);
-    if(found !== undefined ){
+
+  validateLogin(alumno:string, password:string): boolean {
+    const found = this.alumnos.find(Alumno=> Alumno.alumno === alumno);
+    if(found !== undefined){
       return found.password === password;
-    } return false;
+    }else {
+    } return false
+  } 
+   // Nueva función para buscar el usuario
+   findAlumno(alumno: string): Alumno | undefined {
+    return this.alumnos.find(Alumno => Alumno.alumno === alumno);
   }
 }
