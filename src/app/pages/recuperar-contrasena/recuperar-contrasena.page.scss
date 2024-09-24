@@ -1,73 +1,53 @@
-.body{
-    --ion-background-color: rgba(53, 53, 53, 1);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.box_header{
+ 
+  text-align: center;
+}
+
+
+.body {
+	--ion-background-color: rgba(53, 53, 53, 1);
+  --ion-color: #ffff;
+
+}
+
+
+ion-title{
+  margin-top: 80px;
+  color: #ffff;
+  font-family: roboto;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+
+ion-list{
+  width: 390px;
   
 }
 
-
-.box_card{
-    margin-top: 150px;
+ion-intem,ion-icon,ion-input{
+  color: #92E3A9;
 }
 
 
-ion-card{
-    background-color: #263238;
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14vh;
 }
 
-
-
-
-ion-img{
-    width: 100px;
-    height: 80px;
-
-}
-
-.icon{
-    position: absolute;
-    left: 350px;
-    top: 45px;
-    color: #92E3A9;
-}
-
-ion-icon{
-    width: 40px;
-    height: 30px;
+.btn2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1vh;
 }
 
 
 
 
-.box{
-    position: absolute;
-    left: 122px;
-    color: #ffff;
-  
-
-}
-.alumno{
-    margin: 0;
-    padding: 0;
-}
-
-.span{
- margin: 0;
- padding: 0;
-}
-
-
-
-.box_2{
-    color: #ffff;
-    text-align: center;
-}
-
-.box_3{
-    color:#ffff;
-    display: inline-flex;
-}
-
-
-
-.porcentaje{
-    margin-left: 120px;
-}
