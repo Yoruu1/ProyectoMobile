@@ -15,5 +15,7 @@ export class AlumnoPage implements OnInit {
   }
   ngOnInit() {
   }
-
+  irgenerarQr(){
+    this.router.navigate(['/codigoqr'])
+  }
 }
