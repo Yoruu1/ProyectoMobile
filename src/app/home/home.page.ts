@@ -38,8 +38,6 @@ export class HomePage {
     this.router.navigate(['/recuperar-contrasena'])
   }
 
-  irgenerarQr(){
-    this.router.navigate(['/codigo-qr'])
-  }
+  
   
 }
