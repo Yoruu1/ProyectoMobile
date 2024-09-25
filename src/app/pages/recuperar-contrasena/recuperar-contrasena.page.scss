@@ -1,16 +1,20 @@
 .body{
-    --ion-background-color: rgba(53, 53, 53, 1);
+  --ion-background-color: rgba(53, 53, 53, 1);
+}
+
+
+ion-list{
+  width: 390px;
   
 }
 
-
-.box_card{
-    margin-top: 150px;
+ion-intem,ion-icon,ion-input{
+  color: #92E3A9;
 }
 
 
-ion-card{
-    background-color: #263238;
+.btn{
+  text-align: center;
 }
 
 ion-img{
@@ -34,37 +38,14 @@ ion-icon{
 
 
 
+
 .box{
-    position: absolute;
-    left: 122px;
-    color: #ffff;
-  
-
-}
-.alumno{
-    margin: 0;
-    padding: 0;
-}
-
-.span{
- margin: 0;
- padding: 0;
+  margin-top: 160px;
 }
 
 
 
-.box_2{
-    color: #ffff;
-    text-align: center;
-}
-
-.box_3{
-    color:#ffff;
-    display: inline-flex;
-}
-
-
-
-.porcentaje{
-    margin-left: 120px;
+h1{
+  color: #Ffff;
+  text-align: center;
 }

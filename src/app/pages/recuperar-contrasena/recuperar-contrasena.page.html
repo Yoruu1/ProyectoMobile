@@ -1,21 +1,39 @@
-<ion-header [translucent]="true" ion-no-border >
-  <ion-toolbar>
-    <ion-title>Recuperar Contraseña</ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="true" ion-no-border>
+  
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-input [(ngModel)]="alumno" placeholder="Nombre de usuario" label="Nombre Alumno:"></ion-input>
-    </ion-item>
+<ion-content class="body">
+  <h1>Recupera Contraseña</h1>
+  <div class="box">
+    <ion-list>
+      <ion-item>
+        <ion-input [(ngModel)]="alumno" labelPlacement="stacked" label="Nombre de Usuario" placeholder="">
+          <ion-icon slot="start" name="person-circle-outline" aria-hidden="true"></ion-icon>
+        </ion-input>
+        <ion-button fill="clear" slot="end" aria-label="Show/hide">
+          <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+        </ion-button>
+      </ion-item>
 
-    <ion-item>
-      <ion-input [(ngModel)]="newPassword" type="password" placeholder="Nueva contraseña:" label="Nueva Contraseña"></ion-input>
-    </ion-item>
-  </ion-list>
+      <ion-item>
+        <ion-input [(ngModel)]="newPassword" labelPlacement="stacked" type="password" label="Nueva Contraseña" placeholder="">
+          <ion-icon slot="start" name="lock-closed-outline" aria-hidden="true"></ion-icon>
+        </ion-input>
+        <ion-button fill="clear" slot="end" aria-label="Show/hide">
+          <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
 
-  <div class="btn">
-    <ion-button (click)="recuperarContrasena()" color="success">Cambiar Contraseña</ion-button>
+    <div class="btn">
+      <ion-button (click)="recuperarContrasena()" color="success">Cambiar Contraseña</ion-button>
+    </div>
   </div>
 </ion-content>
+  
+  
+      
+  
+  
+  
+  
