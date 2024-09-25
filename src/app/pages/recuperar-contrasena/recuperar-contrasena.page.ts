@@ -21,16 +21,11 @@ export class RecuperarContrasenaPage implements OnInit {
   
  async recuperarContrasena() {
   const user = this.loginService.findAlumno(this.alumno);
-
   if(user){
     user.password = this.newPassword;
     this.router.navigate(['/home']);
   }else{
 
   }
-
-  
-
-
 }
 }

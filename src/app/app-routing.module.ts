@@ -15,9 +15,15 @@ const routes: Routes = [
   {
     path: 'alumno',
     loadChildren: () => import('./pages/alumno/alumno.module').then( m => m.AlumnoPageModule)
-  },  {
+  },
+  {
     path: 'recuperar-contrasena',
     loadChildren: () => import('./pages/recuperar-contrasena/recuperar-contrasena.module').then( m => m.RecuperarContrasenaPageModule)
+  },
+  
+  {
+    path: 'codigo-qr',
+    loadChildren: () => import('./pages/codigo-qr/codigo-qr.module').then( m => m.CodigoQrPageModule)
   },
 
 
