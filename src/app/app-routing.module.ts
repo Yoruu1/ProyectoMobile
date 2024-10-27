@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NoAuthComponent } from './guards/no-auth/no-auth.component';
+import { verificarGuard } from './guards/verificar.guard';
 
 const routes: Routes = [
   {
@@ -14,7 +16,9 @@ const routes: Routes = [
  
   {
     path: 'alumno',
-    loadChildren: () => import('./pages/alumno/alumno.module').then( m => m.AlumnoPageModule)
+    loadChildren: () => import('./pages/alumno/alumno.module').then( m => m.AlumnoPageModule),
+    canActivate: [verificarGuard]
+  
   },
   {
     path: 'recuperar-contrasena',
@@ -23,8 +27,19 @@ const routes: Routes = [
   
   {
     path: 'codigoqr',
-    loadChildren: () => import('./pages/codigoqr/codigoqr.module').then( m => m.CodigoqrPageModule)
+    loadChildren: () => import('./pages/codigoqr/codigoqr.module').then( m => m.CodigoqrPageModule),
+    canActivate: [verificarGuard]
+  
+  },
+  {
+    path: 'intro',
+    loadChildren: () => import('./pages/intro/intro.module').then( m => m.IntroPageModule)
+  },
+  {
+    path: 'no-auth',
+    component: NoAuthComponent
   }
+
 
 ];
 ;

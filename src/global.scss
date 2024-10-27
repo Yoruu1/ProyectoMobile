@@ -32,6 +32,20 @@
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
+
 //  @import "@ionic/angular/css/palettes/dark.always.css"; 
 // @import "@ionic/angular/css/palettes/dark.class.css"; 
 // @import "@ionic/angular/css/palettes/dark.system.css";
+ion-content{
+    --ion-background-color: url(/assets/imagenes/bg.gif);
+    --color: white;
+    }
+
+.glass-content {
+    background: rgba(19, 63, 176, 0.27);
+    box-shadow: 0 4px 30px rgba(7, 77, 216, 0.1);
+    backdrop-filter: blur(25.3px);
+    -webkit-backdrop-filter: blur(25.3px);
+    width: 100%;
+    min-height: 100vh;
+}

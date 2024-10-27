@@ -29,7 +29,12 @@ export class HomePage {
         }
       }
       this.router.navigate(['/alumno'],NavigationExtras);
-    }else { 
+    }else { const toast = await this.toastController.create({
+      message: 'Credenciales incorrectas.',
+      duration: 2000,
+      color: 'danger'
+    });
+    toast.present();
 
     }
   }
