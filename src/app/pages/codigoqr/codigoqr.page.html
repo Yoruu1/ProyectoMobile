@@ -1,12 +1,30 @@
 
 <ion-content  [fullscreen]="true" class="body">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="titulo">
+        Registrar Asistencia
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<h1>Codigo QR</h1>
-
-
-<div class="img_box">
-  <ion-img src="/assets/imgs/qr.png" ></ion-img>
-</div>
+  <h1 class= "ejemplo">Ejemplo de QR</h1>
+  <div class="img_box">
+    <ion-img src="/assets/imgs/qr.png" ></ion-img>
+  </div>
+  
+ <!--  <div class="centrar-contenido">
+    <ion-button color="success" (click)="startScan()">Escanear QR</ion-button>
+    <div *ngIf="scanResult">
+      <p>Resultado del escaneo: {{ scanResult }}</p>
+    </div>
+-->
+  <ion-content>
+    <div class="centrar-contenido">
+      <ion-button color="success" (click)="takePicture()">Agregar QR</ion-button>
+      <img *ngIf="imageUrl" [src]="imageUrl" />
+    </div>
+  </ion-content>
 
 
 </ion-content>
