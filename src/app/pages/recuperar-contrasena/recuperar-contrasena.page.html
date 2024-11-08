@@ -10,19 +10,17 @@
         <ion-input [(ngModel)]="alumno" labelPlacement="stacked" label="Nombre de Usuario" placeholder="">
           <ion-icon slot="start" name="person-circle-outline" aria-hidden="true"></ion-icon>
         </ion-input>
-        <ion-button fill="clear" slot="end" aria-label="Show/hide">
-          <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
-        </ion-button>
+        
       </ion-item>
 
       <ion-item>
         <ion-input [(ngModel)]="newPassword" labelPlacement="stacked" type="password" label="Nueva Contraseña" placeholder="">
           <ion-icon slot="start" name="lock-closed-outline" aria-hidden="true"></ion-icon>
-        </ion-input>
-        <ion-button fill="clear" slot="end" aria-label="Show/hide">
+        <ion-input-password-toggle slot="end">
           <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
-        </ion-button>
-      </ion-item>
+        </ion-input-password-toggle>
+      </ion-input>
+        </ion-item>
     </ion-list>
 
     <div class="btn">

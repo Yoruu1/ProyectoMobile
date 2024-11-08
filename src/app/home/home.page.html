@@ -1,11 +1,9 @@
 <ion-content [fullscreen]="true" class="body">
 
 <div> 
-  <ion-header [translucent]="true" class="ion-no-border ion-text-center">
+  <ion-header  class="ion-no-border ion-text-center">
     <div class="box_header">
-      <ion-title>
-        Registra tu asistencia
-      </ion-title>
+      <H1>Yoru</H1>
     </div>
   </ion-header>
   <ion-img src="https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/1164299/233846_839121.png" ></ion-img>
@@ -15,9 +13,6 @@
   <ion-item>
     <ion-input [(ngModel)]="alumno" labelPlacement="stacked" label="Nombre de Usuario" placeholder="">
       <ion-icon slot="start"name="person-circle-outline" aria-hidden="true"></ion-icon>
-      <ion-button fill="clear" slot="end" aria-label="Show/hide">
-        <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
-      </ion-button>
     </ion-input>
   </ion-item>
 </ion-list>
@@ -26,13 +21,12 @@
   <ion-item>
     <ion-input [(ngModel)]="password" labelPlacement="stacked" type="password" label="Ingresar Contraseña" placeholder="">
       <ion-icon slot="start" name="key-outline" aria-hidden="true"></ion-icon>
-      <ion-button fill="clear" slot="end" aria-label="Show/hide">
+      <ion-input-password-toggle slot="end">
         <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
-      </ion-button>
+      </ion-input-password-toggle>
     </ion-input>
   </ion-item>
 
-  
 
 </ion-list>
 
