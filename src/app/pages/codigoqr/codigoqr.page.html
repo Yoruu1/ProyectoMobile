@@ -9,4 +9,14 @@
 </div>
 
 
+<ion-button class="submit" (click)="startScan()" expand="block" fill="clear" shape="round">
+  SCAN 
+</ion-button>
+
+<ion-item class="result" *ngIf="scanResult" lines="none">
+  <ion-label>Awesome Label</ion-label>
+  <p>scan result</p>
+  <div>{{scanResult}}</div>
+</ion-item>
+
 </ion-content>
