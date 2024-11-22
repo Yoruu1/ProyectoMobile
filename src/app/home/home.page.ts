@@ -21,23 +21,23 @@ export class HomePage {
     this.password =''
     this.message ='Logo exitoso'
   }
+
   async validateLogin(){
     if(this.loginService.validateLogin(this.alumno,this.password)){
       const NavigationExtras:NavigationExtras = {
         state:{
           alumno: this.alumno
         }
-      }
+      } 
       this.router.navigate(['/alumno'],NavigationExtras);
-    }else { const toast = await this.toastController.create({
-      message: 'Credenciales incorrectas.',
-      duration: 2000,
-      color: 'danger'
-    });
-    toast.present();
-
-    }
+    } 
+    else {}
   }
+
+  
+
+
+
 
   irrecuperarContrasena(){
     this.router.navigate(['/recuperar-contrasena'])

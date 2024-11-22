@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { NoAuthComponent } from './guards/no-auth/no-auth.component';
-import { verificarGuard } from './guards/verificar.guard';
+import { noIngresadoGuard } from './no-ingresado.guard';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    canActivate : [noIngresadoGuard]
+
   },
   {
     path: '',
@@ -17,8 +18,8 @@ const routes: Routes = [
   {
     path: 'alumno',
     loadChildren: () => import('./pages/alumno/alumno.module').then( m => m.AlumnoPageModule),
-    canActivate: [verificarGuard]
-  
+    canActivate : [noIngresadoGuard]
+
   },
   {
     path: 'recuperar-contrasena',
@@ -28,16 +29,11 @@ const routes: Routes = [
   {
     path: 'codigoqr',
     loadChildren: () => import('./pages/codigoqr/codigoqr.module').then( m => m.CodigoqrPageModule),
-    canActivate: [verificarGuard]
   
   },
   {
     path: 'intro',
     loadChildren: () => import('./pages/intro/intro.module').then( m => m.IntroPageModule)
-  },
-  {
-    path: 'no-auth',
-    component: NoAuthComponent
   }
 
 

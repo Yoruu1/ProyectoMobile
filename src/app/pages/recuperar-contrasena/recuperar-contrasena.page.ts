@@ -25,7 +25,18 @@ export class RecuperarContrasenaPage implements OnInit {
     user.password = this.newPassword;
     this.router.navigate(['/home']);
   }else{
-
+  
   }
+}
+
+
+async toast (message: string, duration: number = 2000, color: string = 'primary') {
+  const toast = await this.toastController.create({
+    message: message,
+    duration: duration,
+    color: color,
+    position: 'bottom', // Cambia a 'top' o 'middle' según prefieras
+  });
+  await toast.present();
 }
 }
