@@ -18,4 +18,9 @@ export class AlumnoPage implements OnInit {
   irgenerarQr(){
     this.router.navigate(['/codigoqr'])
   }
+
+  asignaturass() {
+    // Lógica del método
+    this.router.navigate(['asignaturas'])
+  }
 }

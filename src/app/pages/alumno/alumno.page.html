@@ -41,52 +41,46 @@
     </ion-card>
 
 
-    <ion-card>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-      <ion-card-header>
-        <ion-card-title>Programacion Mobile</ion-card-title>
-        <ion-card-subtitle>abierto</ion-card-subtitle>
-      </ion-card-header>
-          Accede para tomar tu asistencia
-      <ion-card-content>
+   
 
-      </ion-card-content>
-      <div class="btn">
+      
+      <!-- <div class="btn">
         <ion-button  (click) = "irgenerarQr()"  color="success">Codigo QR</ion-button>
-      </div>
-    </ion-card>
+      </div> -->
+   
 
-    <ion-card>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      </ion-card-header>
-    
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more, nothing less.
-      </ion-card-content>
-      <div class="btn">
-        <ion-button  (click) = "irgenerarQr()"  color="success">Codigo QR</ion-button>
-      </div>
-    </ion-card>
 
-    <ion-card>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      </ion-card-header>
-    
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more, nothing less.
-      </ion-card-content>
-      <div class="btn">
-        <ion-button  (click) = "irgenerarQr()"  color="success">Codigo QR</ion-button>
-      </div>
-    </ion-card>
+
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+      
+          <ion-tab-button tab="account" (click) = "irgenerarQr()">
+            <ion-icon name="camera-outline"></ion-icon>
+              <ion-label>codigo qr</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="account" (click) = "asignaturass()">
+            <ion-icon name="library-outline"></ion-icon>
+            <ion-label>Asignaturas</ion-label>
+          </ion-tab-button>
+          
+        </ion-tab-bar>
+      </ion-tabs>
 
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 </ion-content>

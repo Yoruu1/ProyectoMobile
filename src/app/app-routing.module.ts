@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { noIngresadoGuard } from './no-ingresado.guard';
+// import { noIngresadoGuard } from './no-ingresado.guard';
 
 const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
-    canActivate : [noIngresadoGuard]
+    // canActivate : [noIngresadoGuard]
 
   },
   {
@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'alumno',
     loadChildren: () => import('./pages/alumno/alumno.module').then( m => m.AlumnoPageModule),
-    canActivate : [noIngresadoGuard]
+    // canActivate : [noIngresadoGuard]
 
   },
   {
@@ -34,7 +34,12 @@ const routes: Routes = [
   {
     path: 'intro',
     loadChildren: () => import('./pages/intro/intro.module').then( m => m.IntroPageModule)
+  },
+  {
+    path: 'asignaturas',
+    loadChildren: () => import('./pages/asignaturas/asignaturas.module').then( m => m.AsignaturasPageModule)
   }
+
 
 
 ];
