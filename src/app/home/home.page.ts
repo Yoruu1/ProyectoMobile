@@ -24,25 +24,17 @@ export class HomePage {
 
   async validateLogin(){
     if(this.loginService.validateLogin(this.alumno,this.password)){
-      const NavigationExtras:NavigationExtras = {
+      const navigationExtras:NavigationExtras = {
         state:{
           alumno: this.alumno
         }
       } 
-      this.router.navigate(['/alumno'],NavigationExtras);
+      this.router.navigate(['/alumno'],navigationExtras);
     } 
     else {}
   }
 
-  
-
-
-
-
   irrecuperarContrasena(){
     this.router.navigate(['/recuperar-contrasena'])
-  }
-
-  
-  
+  }  
 }

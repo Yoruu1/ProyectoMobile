@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-// import { noIngresadoGuard } from './no-ingresado.guard';
-
+import { noIngresadoGuard } from './guards/no-ingresado.guard';
+import { ingresadoGuard } from './guards/ingresado.guard';
 const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
-    // canActivate : [noIngresadoGuard]
+    canActivate : [noIngresadoGuard]
 
   },
   {
@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'alumno',
     loadChildren: () => import('./pages/alumno/alumno.module').then( m => m.AlumnoPageModule),
-    // canActivate : [noIngresadoGuard]
+    canActivate : [ingresadoGuard]
 
   },
   {
@@ -29,16 +29,21 @@ const routes: Routes = [
   {
     path: 'codigoqr',
     loadChildren: () => import('./pages/codigoqr/codigoqr.module').then( m => m.CodigoqrPageModule),
-  
+    canActivate : [ingresadoGuard]
+
   },
   {
     path: 'intro',
     loadChildren: () => import('./pages/intro/intro.module').then( m => m.IntroPageModule)
+
   },
   {
     path: 'asignaturas',
-    loadChildren: () => import('./pages/asignaturas/asignaturas.module').then( m => m.AsignaturasPageModule)
+    loadChildren: () => import('./pages/asignaturas/asignaturas.module').then( m => m.AsignaturasPageModule),
+    canActivate : [ingresadoGuard]
+
   }
+
 
 
 

@@ -1,10 +1,10 @@
 <ion-header [translucent]="true">
-
+  <ion-button (click)="logout()" color="danger">Cerrar sesión</ion-button>
 </ion-header>
-
 
 <ion-content  [fullscreen]="true" class="body">
   <section class="box_card">
+    <!--Primer IonCard 1/3-->
     <ion-card>
       <ion-card-header>
         <ion-img src="https://images.pexels.com/photos/2826131/pexels-photo-2826131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" ></ion-img>
@@ -17,71 +17,43 @@
         </div>
       </ion-card-header>
     </ion-card>
-  
-  
+
+    <!--Segundo IonCard 2/3-->
     <ion-card>
       <ion-card-header>
         <div class="box_2">
-          <h1 class="welcom">Bienvenido "{{alumno}}"</h1>
+          <h1 class="welcom">Bienvenido "{{ alumno }}"</h1>
         </div>
       </ion-card-header>
     </ion-card>
-  
+
+     <!--Tercer IonCard 3/3-->
     <ion-card>
       <ion-card-header>
         <div class="box_3">
           <h1 class="asistence">Asistencia</h1>
           <div class="img">
-        
             <ion-img class="porcentaje" src="https://static.vecteezy.com/system/resources/thumbnails/014/494/807/small/website-buffer-loading-icon-a-bar-showing-the-download-status-of-information-on-the-website-png.png" ></ion-img>
           </div>
         </div>
       </ion-card-header>
-    
     </ion-card>
-
-
-   
-
-      
-      <!-- <div class="btn">
-        <ion-button  (click) = "irgenerarQr()"  color="success">Codigo QR</ion-button>
-      </div> -->
-   
-
 
 
       <ion-tabs>
         <ion-tab-bar slot="bottom">
-      
           <ion-tab-button tab="account" (click) = "irgenerarQr()">
             <ion-icon name="camera-outline"></ion-icon>
               <ion-label>codigo qr</ion-label>
           </ion-tab-button>
-      
           <ion-tab-button tab="account" (click) = "asignaturass()">
             <ion-icon name="library-outline"></ion-icon>
             <ion-label>Asignaturas</ion-label>
           </ion-tab-button>
-          
         </ion-tab-bar>
       </ion-tabs>
 
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 </ion-content>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/service/login.service';
 @Component({
   selector: 'app-alumno',
   templateUrl: './alumno.page.html',
@@ -7,16 +8,28 @@ import { Router } from '@angular/router';
 })
 export class AlumnoPage implements OnInit {
   alumno : string = '';
-  constructor(private router: Router) {
-    const navigation= this.router.getCurrentNavigation();
-    if(navigation?.extras.state){
-      this.alumno=navigation.extras.state ['alumno']
+  constructor(private router: Router,
+    private loginService: LoginService
+  ) {
+      // Obtener el nombre del usuario autenticado
+    const usuarioAutenticado = this.loginService.getAlumnoAutenticado();
+    if (usuarioAutenticado) {
+      this.alumno = usuarioAutenticado.alumno; // Asignar el nombre a la variable
+    } else {
+      // Si no hay usuario autenticado, redirigir al login
+      this.router.navigate(['/home']);
     }
   }
   ngOnInit() {
   }
   irgenerarQr(){
     this.router.navigate(['/codigoqr'])
+  }
+
+  //LOGOUT 
+  logout() {
+    this.loginService.logout(); // Lógica de logout
+    this.router.navigate(['/home']); // Redirigir al login
   }
 
   asignaturass() {

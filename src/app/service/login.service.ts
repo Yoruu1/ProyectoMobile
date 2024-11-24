@@ -33,8 +33,6 @@ export class LoginService {
     }
   }
   
-
-  
   getAlumnoAutenticado(): Alumno | null {
     const alumno = localStorage.getItem('alumnoAutenticado');
     if (alumno) {
@@ -50,5 +48,11 @@ export class LoginService {
   }
 
 
+  //LOGOUT 
+  logout(): void {
+    // Eliminar el estado de autenticación
+    localStorage.removeItem('alumnoAutenticado');
+    console.log('Sesión cerrada.');
+  }
  
 }
