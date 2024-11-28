@@ -42,7 +42,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/asignaturas/asignaturas.module').then( m => m.AsignaturasPageModule),
     canActivate : [ingresadoGuard]
 
+  },
+  {
+    path: 'ingles',
+    loadChildren: () => import('./pages/ingles/ingles.module').then( m => m.InglesPageModule)
   }
+
 
 
 
