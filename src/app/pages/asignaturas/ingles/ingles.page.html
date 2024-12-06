@@ -2,15 +2,13 @@
   <ion-toolbar>
     <ion-title>Inglés</ion-title>
   </ion-toolbar>
-  <ion-button (click)="volver()" expand="block" fill="clear" shape="round">
-    volver
-  </ion-button>
+
 </ion-header>
 
-<ion-content>
+<ion-content class="body">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Registrar Asistencia</ion-card-title>
+      <ion-card-title color="success" >Registrar Asistencia</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <!-- Barra de progreso -->
@@ -21,7 +19,11 @@
       <p>Asistencias: {{ asistenciaActual }} / {{ asistenciaMaxima }}</p>
 
       <!-- Botón para escanear -->
-      <ion-button expand="block" (click)="startScan()">Start Scan</ion-button>
+      <ion-button expand="block"  class="btn" color="success" (click)="startScan()">Start Scan</ion-button>
     </ion-card-content>
   </ion-card>
+
+  <ion-button (click)="volver()" color="success" expand="block" fill="clear" shape="round">
+    volver
+  </ion-button>
 </ion-content>
