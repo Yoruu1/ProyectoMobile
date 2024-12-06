@@ -7,7 +7,7 @@
     <!--Primer IonCard 1/3-->
     <ion-card>
       <ion-card-header>
-        <ion-img src="https://images.pexels.com/photos/2826131/pexels-photo-2826131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" ></ion-img>
+        <ion-img src="./../../../assets/imagenes/yoru.png" ></ion-img>
         <div class="box">
           <h2 class="alumno">Alumno:</h2>
           <p class="span">{{alumno}}</p>
@@ -28,24 +28,12 @@
     </ion-card>
 
      <!--Tercer IonCard 3/3-->
-    <ion-card>
-      <ion-card-header>
-        <div class="box_3">
-          <h1 class="asistence">Asistencia</h1>
-          <div class="img">
-            <ion-img class="porcentaje" src="https://static.vecteezy.com/system/resources/thumbnails/014/494/807/small/website-buffer-loading-icon-a-bar-showing-the-download-status-of-information-on-the-website-png.png" ></ion-img>
-          </div>
-        </div>
-      </ion-card-header>
-    </ion-card>
+    
 
 
       <ion-tabs>
         <ion-tab-bar slot="bottom">
-          <ion-tab-button tab="account" (click) = "irgenerarQr()">
-            <ion-icon name="camera-outline"  ></ion-icon>
-              <ion-label>codigo qr</ion-label>
-          </ion-tab-button>
+          
           <ion-tab-button tab="account" (click) = "asignaturass()">
             <ion-icon name="library-outline"  color="success"></ion-icon>
             <ion-label  color="success" >Asignaturas</ion-label>

@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { BarcodeScanner, LensFacing } from '@capacitor-mlkit/barcode-scanning';
 import { ModalController, ToastController,Platform } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
-import { BarcodeScanningModalComponent } from '../pages/codigoqr/barcode-scanning-modal.component';
-
+import { BarcodeScanningModalComponent } from './barcode-scanning-modal.component';
 @Injectable({
   providedIn: 'root'
 })
