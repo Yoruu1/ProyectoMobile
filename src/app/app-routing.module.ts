@@ -45,15 +45,15 @@ const routes: Routes = [
   },
   {
     path: 'ingles',
-    loadChildren: () => import('./pages/ingles/ingles.module').then( m => m.InglesPageModule)
+    loadChildren: () => import('./pages/asignaturas/ingles/ingles.module').then( m => m.InglesPageModule)
   },
   {
     path: 'matematicas',
-    loadChildren: () => import('./pages/matematicas/matematicas.module').then( m => m.MatematicasPageModule)
+    loadChildren: () => import('./pages/asignaturas/matematicas/matematicas.module').then( m => m.MatematicasPageModule)
   },
   {
     path: 'app-movil',
-    loadChildren: () => import('./pages/app-movil/app-movil.module').then( m => m.AppMovilPageModule)
+    loadChildren: () => import('./pages/asignaturas/app-movil/app-movil.module').then( m => m.AppMovilPageModule)
   }
 
 

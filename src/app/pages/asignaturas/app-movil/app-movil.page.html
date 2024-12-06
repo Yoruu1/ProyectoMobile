@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Aplicacion Mobile</ion-title>
+  </ion-toolbar>
+  <ion-button (click)="volver()" expand="block" fill="clear" shape="round">
+    volver
+  </ion-button>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registrar Asistencia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Barra de progreso -->
+      <ion-progress-bar
+        value="{{ asistenciaActual / asistenciaMaxima }}"
+        color="success">
+      </ion-progress-bar>
+      <p>Asistencias: {{ asistenciaActual }} / {{ asistenciaMaxima }}</p>
+
+      <!-- Botón para escanear -->
+      <ion-button expand="block" (click)="startScan()">Start Scan</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

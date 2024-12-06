@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Alumno } from '../model/alumno';
 import { HomePage } from '../home/home.page';
 import { ToastController } from '@ionic/angular';
+import { asistencia } from '../model/asistencia';
 @Injectable({
   providedIn: 'root'
 })
@@ -54,5 +55,28 @@ export class LoginService {
     localStorage.removeItem('alumnoAutenticado');
     console.log('Sesión cerrada.');
   }
- 
+
+  guardarAsistencia(asistencia: { alumno: string; asignatura: string; asistencia: number }) {
+    let asistencias = JSON.parse(localStorage.getItem('asistencias') || '[]');
+  
+    // Buscar si ya existe una entrada para este alumno y asignatura
+    const index = asistencias.findIndex(
+      (a: any) => a.alumno === asistencia.alumno && a.asignatura === asistencia.asignatura
+    );
+  
+    if (index >= 0) {
+      // Actualizar asistencia existente
+      asistencias[index].asistencia = asistencia.asistencia;
+    } else {
+      // Agregar nueva entrada
+      asistencias.push(asistencia);
+    }
+  
+    // Guardar en localStorage
+    localStorage.setItem('asistencias', JSON.stringify(asistencias));
+  }
+  
+  obtenerAsistencias(): any[] {
+    return JSON.parse(localStorage.getItem('asistencias') || '[]');
+}
 }

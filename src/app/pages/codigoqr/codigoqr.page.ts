@@ -45,10 +45,4 @@ async startScan() {
   }
 }
 
-
-
-
-
-
-
 }

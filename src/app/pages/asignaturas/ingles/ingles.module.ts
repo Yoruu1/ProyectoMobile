@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { InglesPageRoutingModule } from './ingles-routing.module';
 
 import { InglesPage } from './ingles.page';
+import { BarcodeScanningModalComponent } from './barcode-scanning-modal.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InglesPageRoutingModule,
+    InglesPageRoutingModule
   ],
-  declarations: [InglesPage]
+  declarations: [InglesPage,BarcodeScanningModalComponent]
 })
 export class InglesPageModule {}

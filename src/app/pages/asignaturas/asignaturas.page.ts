@@ -22,7 +22,9 @@ irmatematicas(){
 }
 
 irapp_movil() {
-  this.router.navigate(['app_movil'])
+  this.router.navigate(['app-movil'])
 }
-
+irAlumnos (){
+  this.router.navigate(['alumno'])
+}
 }

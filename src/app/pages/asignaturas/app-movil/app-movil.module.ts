@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AppMovilPageRoutingModule } from './app-movil-routing.module';
 
 import { AppMovilPage } from './app-movil.page';
+import { BarcodeScanningModalComponent } from './barcode-scanning-modal.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { AppMovilPage } from './app-movil.page';
     IonicModule,
     AppMovilPageRoutingModule
   ],
-  declarations: [AppMovilPage]
+  declarations: [AppMovilPage,BarcodeScanningModalComponent]
 })
 export class AppMovilPageModule {}
