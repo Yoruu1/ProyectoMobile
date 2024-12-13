@@ -49,7 +49,11 @@ const routes: Routes = [
   {
     path: 'app-movil',
     loadChildren: () => import('./pages/asignaturas/app-movil/app-movil.module').then( m => m.AppMovilPageModule)
+  },  {
+    path: 'profesor',
+    loadChildren: () => import('./pages/profesor/profesor.module').then( m => m.ProfesorPageModule)
   }
+
 
 
 

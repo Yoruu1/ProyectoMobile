@@ -8,10 +8,10 @@ import { asistencia } from '../model/asistencia';
 })
 export class LoginService {
 
-  alumnos : Alumno [] = [
-    new Alumno('axel','123'),
-    new Alumno('kevin','123')
-    ]
+  alumnos: Alumno[] = [
+    new Alumno(1, 'axel', '123'),
+    new Alumno(2, 'kevin', '123')
+  ];
 
   constructor() { }
 
@@ -34,18 +34,22 @@ export class LoginService {
     }
   }
   
-  getAlumnoAutenticado(): Alumno | null {
-    const alumno = localStorage.getItem('alumnoAutenticado');
-    if (alumno) {
-      return JSON.parse(alumno); // Convertir a un objeto
-    }
-    return null; // Si no hay datos, devolver null
+   // Método para obtener el alumno autenticado desde el localStorage
+   getAlumnoAutenticado(): Alumno | null {
+    const alumno = JSON.parse(localStorage.getItem('alumnoAutenticado') || '{}');
+    return alumno ? alumno : null;
   }
   
 
    // Nueva función para buscar el usuario
    findAlumno(alumno: string): Alumno | undefined {
     return this.alumnos.find(Alumno => Alumno.alumno === alumno);
+  }
+  
+   // Método para autenticar al alumno (esto es solo un ejemplo)
+   authenticateAlumno(id: number, username: string) {
+    const alumno = new Alumno(id, username, '');  // Asumimos que la contraseña no se guarda por razones de seguridad
+    localStorage.setItem('alumnoAutenticado', JSON.stringify(alumno));
   }
 
 

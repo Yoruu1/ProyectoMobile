@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Generar QR - Profesor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Selecciona una asignatura y fecha</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Selector de asignatura -->
+      <ion-item>
+        <ion-label position="stacked">Asignatura</ion-label>
+        <ion-select [(ngModel)]="selectedSubject" placeholder="Selecciona una asignatura">
+          <ion-select-option *ngFor="let subject of asignaturas" [value]="subject">{{ subject }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Botón y modal para seleccionar fecha -->
+      <ion-item>
+        <ion-label position="stacked">Fecha</ion-label>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime
+              id="datetime"
+              (ionChange)="onDateChange($event)"
+              presentation="date"
+            ></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-item>
+
+      <!-- Botón para generar el QR -->
+      <ion-button expand="full" (click)="generateQRCode()">Generar QR</ion-button>
+
+      <!-- Mostrar el QR generado -->
+      <div *ngIf="qrCode" class="qr-container">
+        <img [src]="qrCode" alt="QR Code" />
+      </div>
+    </ion-card-content>
+
+
+   
+  </ion-card>
+
+  <ion-card>
+    <div>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Ver Asistencias</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+      <!-- Botón para obtener las asistencias -->
+      <ion-button expand="full" (click)="verAsistencias()">Ver Asistencias</ion-button>
+      
+      <!-- Mostrar la lista de asistencias -->
+      <ion-list *ngIf="asistencias.length > 0">
+        <ion-item *ngFor="let asistencia of asistencias">
+          <ion-label>
+            <h2>{{ asistencia.nombre }}</h2>
+            <p>{{ asistencia.materia }} - {{ asistencia.fecha }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <p *ngIf="asistencias.length === 0">No hay asistencias registradas.</p>
+    </div>
+  </ion-card>
+</ion-content>

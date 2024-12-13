@@ -1,9 +1,11 @@
 export class Alumno {
-    alumno : string; 
-    password : string; 
-
-    constructor (a: string, p:string){
-        this.alumno =a 
-        this.password = p
+    id: number;   // Agregamos un id
+    alumno: string;
+    password: string;
+  
+    constructor(id: number, alumno: string, password: string) {
+      this.id = id;
+      this.alumno = alumno;
+      this.password = password;
     }
 }

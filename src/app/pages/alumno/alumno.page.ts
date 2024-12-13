@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/service/login.service';
+import { ScannerService } from 'src/app/service/scanner.service';
 @Component({
   selector: 'app-alumno',
   templateUrl: './alumno.page.html',
@@ -9,7 +10,8 @@ import { LoginService } from 'src/app/service/login.service';
 export class AlumnoPage implements OnInit {
   alumno : string = '';
   constructor(private router: Router,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private scannerService: ScannerService
   ) {
       // Obtener el nombre del usuario autenticado
     const usuarioAutenticado = this.loginService.getAlumnoAutenticado();
@@ -20,6 +22,11 @@ export class AlumnoPage implements OnInit {
       this.router.navigate(['/home']);
     }
   }
+
+  scanQRCode() {
+    this.scannerService.startScan();
+  }
+
   ngOnInit() {
   }
   irgenerarQr(){
